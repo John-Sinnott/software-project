@@ -26,11 +26,13 @@
      <script>
         document.addEventListener("DOMContentLoaded", function () {
             var map = L.map('map').setView([51.505, -0.09], 13);
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; OpenStreetMap contributors'
+            var georgia = L.marker([42, 43]).addTo(map);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 20,
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+                subdomains: 'abcd'
             }).addTo(map);
+            
         });
      </script>
 </x-app-layout>
