@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
@@ -16,9 +17,11 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Deforestation',
                 'description' => 'Deforestation is the large-scale, often permanent removal of forest cover for human land use, such as agriculture, mining, and infrastructure, resulting in a degraded "desert-brown" landscape.',
-                'created_at' => $currentTimestamp,
-                'updated_at' => $currentTimestamp,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
+
+        DB::table('categories')->insert($categorys);
     }
 }

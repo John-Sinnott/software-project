@@ -25,14 +25,17 @@
 
      <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var map = L.map('map').setView([51.505, -0.09], 13);
-            var georgia = L.marker([42, 43]).addTo(map);
+            var map = L.map('map').setView([50, 10], 4);
+            
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 20,
                 attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
                 subdomains: 'abcd'
             }).addTo(map);
-            
+
+            var georgia = L.marker([42, 43]).addTo(map)
+            .bindPopup('Georgian Deforestation Article.');
+            var georg = L.marker([50.5555, 30.5 ]).addTo(map);
         });
      </script>
 </x-app-layout>
