@@ -22,10 +22,14 @@
     <div class="p-6">
      <div id="map" style="height: 500px;"></div>
      </div>
+     <script>
+        const articles = @json($articles);
+    </script>
 
      <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var map = L.map('map').setView([50, 10], 4);
+
+            var map = L.map('map').setView([20, 0], 2);
             
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 20,
@@ -33,9 +37,29 @@
                 subdomains: 'abcd'
             }).addTo(map);
 
-            var georgia = L.marker([42, 43]).addTo(map)
-            .bindPopup('Georgian Deforestation Article.');
-            var georg = L.marker([50.5555, 30.5 ]).addTo(map);
+            articles.forEach(article => {
+
+        if(article.latitude && article.longitude){
+
+            let marker = L.marker([article.latitude, article.longitude])
+                .addTo(map)
+                .bindPopup(`
+                    <strong>Article ${article.id}</strong><br>
+                    ${article.description}<br>
+                    <a href="/articles/${article.id}">Read Article</a>`);
+        }
+
+    });
+
         });
      </script>
+
+     <div class="bg-red-500 text-white p-4">
+    Tailwind Test
+    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('articles.create')" :active="request()->routeIs('articles.create')">
+                        {{ __('Submit articles') }}
+                    </x-nav-link>
+                </div>
+    </div>
 </x-app-layout>

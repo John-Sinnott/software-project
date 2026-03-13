@@ -16,6 +16,14 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.*')">
+                        {{ __('Articles') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
+                        {{ __('Categories') }}
+                    </x-nav-link>
+
                 {{-- <x-nav-link>
                 <x-nav-link :href="route(category.index)" :active="request()->routeIs('category.index')">
                     {{ __('View All Categorys') }}

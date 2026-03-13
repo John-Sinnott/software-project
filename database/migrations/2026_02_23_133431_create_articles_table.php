@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('description');
             $table->longText('article_full');
 
-            $table->decimal('latitude', 10, 7);
-            $table->decimal('longitude', 10, 7);
+            $table->decimal('latitude');
+            $table->decimal('longitude');
 
             $table->timestamps();
         });
