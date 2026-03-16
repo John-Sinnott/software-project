@@ -23,6 +23,9 @@ return new class extends Migration
             $table->decimal('latitude');
             $table->decimal('longitude');
 
+            $table->integer('stat_number')->nullable();
+            $table->string('stat_label')->nullable();
+
             $table->timestamps();
         });
     }

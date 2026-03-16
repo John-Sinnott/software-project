@@ -31,7 +31,7 @@ class ArticleController extends Controller
     {
         $request->validate([
             
-        ])
+        ]);
     }
 
     /**

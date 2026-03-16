@@ -9,20 +9,35 @@
 
         @foreach($articles as $article)
 
-            <div class="mb-6 p-4 bg-white shadow rounded">
+            <div class="mb-6 p-5 bg-white shadow-lg rounded-lg">
 
-                <h3 class="text-lg font-bold">
-                    Article {{ $article->id }}
+                <span class="text-sm text-green-600 font-semibold">
+                    {{ $article->category }}
+                </span>
+
+                <h3 class="text-xl font-bold mt-1">
+                    {{ $article->title }}
                 </h3>
 
-                <p class="mt-2">
+                <p class="mt-2 text-gray-600">
                     {{ $article->description }}
                 </p>
 
                 <a href="{{ route('articles.show', $article->id) }}"
-                   class="text-blue-500 underline">
-                   Read Full Article
+                class="inline-block mt-3 text-blue-500 font-semibold">
+                    Read Full Article →
                 </a>
+
+                @if($article->stat_number)
+                <div class="mt-3 p-3 bg-green-100 rounded">
+                    <p class="text-2xl font-bold">
+                        {{ number_format($article->stat_number) }}
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        {{ $article->stat_label }}
+                    </p>
+                </div>
+                @endif
 
             </div>
 
