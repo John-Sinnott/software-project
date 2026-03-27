@@ -54,6 +54,12 @@
         });
      </script>
 
+     @if(session('success'))
+        <div class="mb-4 text-green-600">
+            {{ session('success') }}
+        </div>
+    @endif
+
      <div class="bg-red-500 text-white p-4">
     Tailwind Test
     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">

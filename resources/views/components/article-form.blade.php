@@ -9,20 +9,14 @@
     <div class="mb-4">
         <label for="name" class="block text-sm text-gray-700">Name</label>
         <input type="text" name="name" id="name"
-               value="{{ old('name', $article->name ?? '') }}" required
+               value="{{ old('name', $article?->name) }}" required
                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
         @error('name') <p class="text-sm text-red-600">{{ $message }}</p> @enderror
     </div>
  
-    <div class="mb-4">
-        <label for="image" class="block text-sm text-gray-700">Report Cover Image</label>
-        <input type="file" name="image" id="image"
-               {{ isset($article) ? '' : 'required' }}
-               class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
-        @error('image') <p class="text-sm text-red-600">{{ $message }}</p> @enderror
-    </div>
+    
  
-    @isset($article->image)
+    @if(isset($article) && $article->image)
         <div class="mb-4">
             <img src="{{ asset($article->image) }}" alt="article cover" class="w-24 h-32 object-cover">
         </div>
@@ -30,7 +24,7 @@
     <div class="mb-4">
         <label for="date" class="block text-sm text-gray-700">Date</label>
         <input type="date" name="date" id="date"
-               value="{{ old('date', $article->date ?? '') }}" required
+               value="{{ old('date', $article?->date) }}" required
                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
         @error('date') <p class="text-sm text-red-600">{{ $message }}</p> @enderror
     </div>
@@ -44,13 +38,13 @@
     <div class="mb-4">
         <label class="block text-sm text-gray-700">Location</label>
         <div id="map" style="height: 400px;" class="mb-3 rounded shadow-sm"></div>
-        <input type="text" name="latitude" id="latitude" value="{{ old('latitude', $article->latitude ?? '') }}" readonly class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
-        <input type="text" name="longitude" id="longitude" value="{{ old('longitude', $article->longitude ?? '') }}" readonly class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        <input type="text" name="latitude" id="latitude" value="{{ old('latitude', $article?->latitude) }}" readonly class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        <input type="text" name="longitude" id="longitude" value="{{ old('longitude', $article?->longitude) }}" readonly class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
     </div>
  
  
     <div>
-        <x-primary-button>{{ isset($article) ? 'Update Report' : 'Add Report' }}</x-primary-button>
+        <x-primary-button>{{ isset($article) ? 'Update Article' : 'Add Article' }}</x-primary-button>
     </div>
 </form>
  

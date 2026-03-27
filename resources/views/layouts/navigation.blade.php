@@ -24,6 +24,11 @@
                         {{ __('Categories') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('articles.create')" :active="request()->routeIs('articles.*')">
+                        {{ __('Create New Articles') }}
+                    </x-nav-link>
+                    
+
                 {{-- <x-nav-link>
                 <x-nav-link :href="route(category.index)" :active="request()->routeIs('category.index')">
                     {{ __('View All Categorys') }}

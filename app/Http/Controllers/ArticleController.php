@@ -27,11 +27,19 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
-        $request->validate([
-            
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required',
+            'date' => 'required|date',
+            'latitude' => 'nullable',
+            'longitude' => 'nullable',
         ]);
+        Article::create($validated);
+
+        return redirect()->route('dashboard')->with('success', 'Article created!');
     }
 
     /**

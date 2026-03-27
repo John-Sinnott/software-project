@@ -12,8 +12,8 @@
                     <h3 class="font-semibold text-lg mb-4">Add a New Article:</h3>
 
                     <x-article-form
-                        :action="route('articles.store')"
-                        :method="'POST'"
+                        action="{{ route('articles.store') }}" 
+                        method="POST" 
                     />
                 </div>
             </div>
