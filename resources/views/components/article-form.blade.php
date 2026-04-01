@@ -1,4 +1,4 @@
-@props(['action', 'method', 'article' => null])
+@props(['action', 'method', 'article' => null, 'categories' => []])
  
 <form action="{{ $action }}" method="POST" enctype="multipart/form-data">
     @csrf
@@ -29,10 +29,43 @@
         @error('date') <p class="text-sm text-red-600">{{ $message }}</p> @enderror
     </div>
     <div class="mb-4">
+    <label for="category_id" class="block text-sm text-gray-700">Category</label>
+    
+    <select name="category_id" id="category_id" required
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        
+        <option value="">Select Category</option>
+
+        @foreach($categories as $category)
+            <option value="{{ $category->id }}"
+                {{ old('category_id', $article?->category_id) == $category->id ? 'selected' : '' }}>
+                {{ $category->name }}
+            </option>
+        @endforeach
+    </select>
+
+        @error('category_id')
+            <p class="text-sm text-red-600">{{ $message }}</p>
+        @enderror
+    </div>
+    <div class="mb-4">
         <label for="description" class="block text-sm text-gray-700">Description</label>
         <textarea name="description" id="description" required
                   class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">{{ old('description', $article->description ?? '') }}</textarea>
         @error('description') <p class="text-sm text-red-600">{{ $message }}</p> @enderror
+    </div>
+
+    <div class="mb-4">
+    <label for="article_full" class="block text-sm text-gray-700">Full Article</label>
+    
+    <textarea name="article_full" id="article_full" rows="6" required
+        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        {{ old('article_full', $article?->article_full) }}
+    </textarea>
+
+        @error('article_full')
+            <p class="text-sm text-red-600">{{ $message }}</p>
+        @enderror
     </div>
  
     <div class="mb-4">

@@ -9,9 +9,12 @@ class Article extends Model
     protected $fillable = [
         'name',
         'description',
+        'article_full',
         'date',
         'latitude',
         'longitude',
+        'category_id',
+        'user_id',
     ];
 
     protected $casts = [

@@ -15,6 +15,10 @@
                     {{ $article->category }}
                 </span>
 
+                <span class="text-sm text-green-600 font-semibold">
+                    {{ $article->date }}
+                </span>
+
                 <h3 class="text-xl font-bold mt-1">
                     {{ $article->title }}
                 </h3>

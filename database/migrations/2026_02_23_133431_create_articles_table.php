@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('date');
             $table->text('description');
-            $table->longText('article_full');
+            $table->text('article_full')->nullable();
 
             $table->decimal('latitude');
             $table->decimal('longitude');

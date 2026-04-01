@@ -14,6 +14,7 @@
                     <x-article-form
                         action="{{ route('articles.store') }}" 
                         method="POST" 
+                        :categories="$categories"
                     />
                 </div>
             </div>
