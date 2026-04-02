@@ -5,23 +5,31 @@
         </h2>
     </x-slot>
 
+    {{-- Map container --}}
+    <div class="mb-8">
+     <div id="map" class="h-[500px] rounded-2xl overflow-hidden border border-slate-800"></div>
+     </div>
 
-    
+     <div class="mt-8 flex justify-between items-center">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
+    <div>
+        <h2 class="text-2xl font-bold text-white">
+            Environmental Reports
+        </h2>
+        <p class="text-slate-400 text-sm">
+            Contribute by submitting new reports
+        </p>
     </div>
 
-    {{-- Map container --}}
-    <div class="p-6">
-     <div id="map" style="height: 500px;"></div>
-     </div>
+    <a href="{{ route('articles.create') }}"
+       class="bg-gradient-to-r from-blue-500 to-indigo-600 
+              hover:from-blue-600 hover:to-indigo-700
+              text-white px-6 py-3 rounded-xl font-semibold 
+              shadow-lg hover:shadow-xl transition-all duration-200">
+         Submit Report
+    </a>
+
+</div>
      <script>
         const articles = @json($articles);
     </script>
@@ -55,17 +63,10 @@
      </script>
 
      @if(session('success'))
-        <div class="mb-4 text-green-600">
+        <div class="mb-6 bg-green-900/30 border border-green-700 text-green-300 px-4 py-3 rounded-lg">
             {{ session('success') }}
         </div>
     @endif
 
-     <div class="bg-red-500 text-white p-4">
-    Tailwind Test
-    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('articles.create')" :active="request()->routeIs('articles.create')">
-                        {{ __('Submit articles') }}
-                    </x-nav-link>
-                </div>
     </div>
 </x-app-layout>
