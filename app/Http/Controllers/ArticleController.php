@@ -25,7 +25,6 @@ class ArticleController extends Controller
     {
         $categories = Category::all();
         return view('articles.create', compact('categories'));
-
     }
 
     /**
@@ -37,6 +36,7 @@ class ArticleController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required',
+            'article_full' => 'required|string',
             'date' => 'required|date',
             'latitude' => 'nullable',
             'longitude' => 'nullable',

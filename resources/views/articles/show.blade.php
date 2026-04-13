@@ -1,8 +1,8 @@
 <x-app-layout>
 
-<div class="p-6 max-w-4xl mx-auto bg-white shadow rounded">
+<div class="p-6 max-w-4xl mx-auto bg-white shadow rounded text-black">
 
-    <h1 class="text-2xl font-bold mb-4">
+    <h1 class="text-2xl font-bold mb-4 ">
         Article {{ $article->id }}
     </h1>
 
