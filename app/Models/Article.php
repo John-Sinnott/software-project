@@ -20,4 +20,8 @@ class Article extends Model
     protected $casts = [
         'chart_data' => 'array',
     ];
+    public function category()
+    {
+    return $this->belongsTo(\App\Models\Category::class);
+    }
 }

@@ -25,84 +25,88 @@ class ArticleSeeder extends Seeder
                 'id' => 1,
                 'category_id' => 1,
                 'user_id' => 1,
-                'name' => 'Deforestaion in Brazilian Amazon',
+                'name' => 'Global Forest Deforestation and Its Impact',
                 'date' => now(),
-                'description' => 'Deforestation in the Brazilian Amazon has surged in recent years due to cattle ranching and agricultural expansion. Satellite monitoring shows thousands of square kilometres of rainforest being cleared annually.',
-                'article_full' => 'Satellite data collected by Brazil’s National Institute for Space Research (INPE) has shown continued forest loss in the Amazon rainforest, particularly in regions surrounding Manaus and other agricultural frontiers. Scientists warn that deforestation reduces the Amazon’s ability to absorb carbon dioxide, worsening climate change and threatening thousands of plant and animal species that depend on the forest ecosystem.',
-                'latitude' => -3.1190,
-                'longitude' => -60.0217,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
+                'description' => 'An overview of global forest loss and its environmental impact based on FAO data.',
+                'article_full' => 'The rate at which the forests are being destroyed is alarming and is leading to a significant impact on our planet. 
+                                    The Global Forest Resources Assessment 2020 was published by the Food and Agriculture Organization (FAO), provides a detailed overview of global forest conditions over thirty years between 1990 – 2020. The report collected data from 236 countries and territories, analyzing factors such as forest areas, biodiversity, and environmental disturbances. 
+
+                                    Since 1990, approximately 178 million hectares of forests have been lost worldwide. This area is roughly equivalent to the size of Libya, in total, around 420 million hectares of forest has been converted for uses such as agriculture and infrastructure. 
+
+                                    Although deforestation remains a major concern, there has been some progress. The annual rate of forest loss since the 1990’s has decreased from 7.8 million hectares per year to just 4.7 million between the year 2010 and 2020. 
+
+                                    Despite the improvement over the course of nearly 30 years, recent increases in deforestation rates between 2015 and 2020 have reached approximately 10 million hectares per year, this shows that the problem is far from solved and continued forest loss threatens our biodiversity and impacts global ecosystems.',
+                'latitude' => 53,
+                'longitude' => 8,
+                'stat_number' => 178000000,
+                'stat_label' => 'Hectares of forest lost since 1990',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 2,
-                'category_id' => 1,
+                'category_id' => 2,
                 'user_id' => 1,
-                'name' => 'How palm oil production causes deforestation in Borneo',
+                'name' => 'Desertification in the Sahel Region',
                 'date' => now(),
-                'description' => 'Palm oil production has been one of the leading causes of deforestation in Borneo. Large areas of tropical rainforest have been cleared to establish industrial plantations.',
-                'article_full' => 'Environmental groups report that palm oil expansion in Indonesia and Malaysia has led to extensive forest clearing across the island of Borneo. The destruction of these forests threatens endangered wildlife such as orangutans, pygmy elephants, and clouded leopards, while also releasing significant amounts of carbon stored in peatlands.',
-                'latitude' => 0.9619,
-                'longitude' => 114.5548,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
+                'description' => 'An overview of desertification in the Sahel and its impact on communities and ecosystems.',
+                'article_full' => 'Desertification In Sahel Regions - 
+
+                                    The Sahel region of Africa is one of the most affected areas by desertification in the world. 
+
+                                    The region that stretches across several countries south of the Sahara Desert including, parts of Mali, Niger, and Chad. Large areas of land in Sahel have become less suitable for farming and agriculture due to the increasingly dry conditions. 
+                                
+                                    Desertification in the Sahel is caused by both natural and human factors. Climate change has led to higher temperatures and reduced rainfall, making it difficult for vegetation to grow in its land. On the other hand, human activities such as overgrazing, deforestation, and poor land management have led to further damage to the soil, as a result fertile land is turning into deserts. 
+                                 
+                                    Peoples lives have been considerably impacted in this region due to many communities relying on farming and livestock for income. This leads to food shortages and poverty in the area because the land cannot produce the demand that is needed. People are forced to leave their homes in search of better living conditions, and water scarcity has become a problem as rivers and lakes have reduced in size over time. 
+                                
+                                    An example of this environmental change is Lake Chad in Sahel; it has seen a significant decrease in size over the last few decades. This just proves the scale of the degradation taking place in the region and its effects on the population. 
+
+                                    A major initiative to combat these losses is the Great Green Wall project, it aims to restore millions of hectares of degraded land by planting trees and promoting sustainable land usage to the farmers. This not only helps the enviornmant but also boosts local economies by creating jobs and improving food security. 
+
+                                    Desertification in the Sahel region demonstrates how these issues can have widespread social and economic impacts. Addressing problems such as these is essential for achieving SDG 15, which focuses on protecting and restoring life on land ',
+                'latitude' => 19.0643,
+                'longitude' => 3.5437,
+                'stat_number' =>  100000000,
+                'stat_label' => 'Hectares of land targeted for restoration by the Great Green Wall',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 3,
-                'category_id' => 1,
-                'user_id' => 2,
-                'name' => 'Illegal Logging in Congo rainforest',
-                'date' => now(),
-                'description' => 'Illegal logging remains a major threat to the Congo Basin rainforest. Weak enforcement and high demand for timber are accelerating forest degradation across Central Africa.',
-                'article_full' => 'The Congo Basin is the world’s second-largest rainforest and plays a vital role in regulating global climate systems. However, illegal logging operations and unsustainable timber extraction are placing immense pressure on the ecosystem, threatening endangered species including forest elephants and western lowland gorillas.',
-                'latitude' => 0.5153,
-                'longitude' => 25.1913,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'id' => 4,
-                'category_id' => 2,
-                'user_id' => 2,
-                'name' => 'Desertification raises concern for food security in Sahel region of Africa',
-                'date' => now(),
-                'description' => 'Desertification across the Sahel region of Africa is threatening agriculture and food security. Expanding drylands are forcing communities to adapt to harsher environmental conditions.',
-                'article_full' => 'Countries across the Sahel, including Niger and Mali, are facing growing desertification caused by climate change, overgrazing, and unsustainable land use. The loss of fertile soil is reducing crop yields and increasing the vulnerability of rural communities, prompting international efforts such as the Great Green Wall initiative to restore degraded land.',
-                'latitude' => 13.5116,
-                'longitude' => 2.1254,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'id' => 5,
                 'category_id' => 3,
                 'user_id' => 3,
                 'name' => 'Rapid biodiversity loss in Madagascar',
                 'date' => now(),
                 'description' => 'Madagascar is experiencing rapid biodiversity loss as forests are cleared for agriculture. Many of the island’s unique species are now threatened by habitat destruction.',
-                'article_full' => 'Madagascar is one of the most biologically diverse places on Earth, with around 90 percent of its wildlife found nowhere else. However, slash-and-burn farming practices and logging have significantly reduced forest coverage, putting species such as lemurs, chameleons, and rare plants at risk of extinction.',
+                'article_full' => 'Biodiversity Loss in Madagascar - 
+
+                                    Madagascar is one of the most unique ecosystems in the world, it is home to a vast range of plants and animals that of which dont call home in any other place on Earth. Because of this, the island has developed an extraordinary level of biodiversity, making it incredibly important for conservation globally. 
+                                    
+                                    According to the World Wildlife Fund (WWF), Around 70% of Madagascars species are found nowhere else in the world, Including several different species of lemurs, reptiles, and plant life. Which highlights the importance of protecting it as an environmental hotspot. 
+
+                                    However, this biodiversity is under a serious threat. Manmade activities such as deforestation, agriculture and resource exploitation have cause significant environmental damage, it is estimated that around 90% of Madagascars original forest cover has already been lost due to land being cleared for farming. 
+
+                                    The loss of forests has had a direct impact on the wildlife in Madagascar. Many species rely on these important ecosystems to survive, and as they are destroyed, animals such as lemurs face the risk of extinction. According to environmental data, many species have recently been classified as endangered or threatened. 
+
+                                    This is not only a local issue, but a global one. Biodiversity plays a key role in maintaining ecosystems, supporting food systems, and regulating the climate. This loss in Madagascar highlights the wider problem stemming from biodiversity loss across the world and the urgent need for efforts to be made to stop it. 
+
+                                    Protections are being put in place in Madagascars unique environment, including conservation programmes and protected areas. However, Continued action is required to make sure that these areas can be preserved for the future generations.',
                 'latitude' => -18.8792,
                 'longitude' => 47.5079,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
+                'stat_number' => 70,
+                'stat_label' => '% of wildlife in Madagascar found nowhere else',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'id' => 6,
+                'id' => 4,
                 'category_id' => 1,
                 'user_id' => 2,
                 'name' => 'Illegal loggin in Georgia',
                 'date' => now(),
-                'description' => 'The problem of illegal loggin and deforestation in Georgia has been a cause of worry for the last 30 years due to these companies relentless disregard for local ecosystems. Thankfully the Georgian government implemented a stricter regulation in 2025 which can result in up to 3-5 years in prison for failure to comply.',
+                'description' => 'Illegal logging in Georgia and how its destroying the forests',
+                'article_full' =>'The problem of illegal loggin and deforestation in Georgia has been a cause of worry for the last 30 years due to these companies relentless disregard for local ecosystems. Thankfully the Georgian government implemented a stricter regulation in 2025 which can result in up to 3-5 years in prison for failure to comply.',
                 'article_full' => 'Georgia Tightens Sanctions for Illegal Logging
                 The Parliament of Georgia has adopted legislative amendments to strengthen sanctions for illegal logging, following a draft law prepared by the Ministry of Environmental Protection and Agriculture. The amendments introduce stricter penalties under the Criminal Code and the Code of Administrative Offences, reflecting the government’s commitment to protecting the country’s forest resources.
                 The new regulations impose tougher liability for offences such as the illegal processing of industrial timber, with particular attention given to violations involving sawmills and the unauthorised handling of unmarked roundwood (logs). However, the law maintains allowances for rural residents to extract firewood following existing legal provisions. 
@@ -112,11 +116,11 @@ class ArticleSeeder extends Seeder
                 Violation of sawmill registration requirements will now be punishable by 1 to 3 years of imprisonment, and 3 to 5 years for repeat offences.
                 A newly introduced Article 287² in the Criminal Code defines criminal liability for the placement of unmarked roundwood at sawmill facilities. If the action is repeated by someone previously subjected to administrative sanctions, or if the quantity of unmarked timber causes significant environmental damage, the penalty includes a fine and/or imprisonment of 1 to 3 years. The placement of a large quantity of unmarked timber resources may result in 3 to 5 years of imprisonment and/or a fine. Legal entities found guilty under this article face liquidation or a five-year ban on conducting business.
                 Illegal felling of woody plants and unlawful timber production will now be punishable by 1 to 3 years of imprisonment, increasing to up to 4 years for repeat violations. If committed by a legal entity, the penalty includes liquidation or business disqualification for up to 5 years.
-                The amendments also introduce criminal liability for the illegal logging of large quantities of trees in state forests or protected areas, punishable by a fine and/or 5 to 7 years of imprisonment. ',
+                The amendments also introduce criminal liability for the illegal logging of large quantities of trees in state forests or protected areas, punishable by a fine and/or 5 to 7 years of imprisonment.',
                 'latitude' => 42.315,
                 'longitude' => 43.3569,
-                'stat_number' => 10000,
-                'stat_label' => 'Trees cut down in amazon in last 48 hrs',
+                'stat_number' => 5,
+                'stat_label' => 'Years imprisonment for repeated illegal logging offences',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
