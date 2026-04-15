@@ -27,7 +27,7 @@ class CategorySeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Biodiversity Loss ',
+                'name' => 'Biodiversity-Loss',
                 'description' => 'Biodiversity loss is the rapid, human-driven decline in the variety of life on Earth, including the reduction of species, genetic diversity, and entire ecosystems. Driven by habitat destruction, pollution, and climate change, this loss causes ecosystem instability, threatening food security, clean air, water, and human health.',
                 'created_at' => now(),
                 'updated_at' => now(),

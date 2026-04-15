@@ -1,36 +1,37 @@
 <x-app-layout>
 
-<div class="w-full">
+<div class="max-w-6xl mx-auto px-6 py-10">
 
-    <!-- Images -->
-    <div class="relative w-full h-[400px] mb-10">
+<div class="grid md:grid-cols-2 gap-6 items-center mb-8">
+    <!-- Text-->
+    <div>
+        <h1 class="text-4xl font-bold text-white mb-3">
+            {{ $category->name }}
+        </h1>
+
+        <p class="text-slate-400 leading-relaxed">
+            {{ $category->description }}
+        </p>
+    </div>
+
+    <!-- Infographic -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-3 flex justify-center">
 
         @if($category->id == 1)
-            <img src="{{ asset('images/deforestationinfog.png') }}" class="w-full h-full object-cover">
+            <img src="{{ asset('images/deforestationinfog.png') }}" class="object-contain rounded">
         @elseif($category->id == 2)
-            <img src="{{ asset('images/desertificationinfog.png') }}" class="w-full h-full object-cover">
+            <img src="{{ asset('images/desertificationinfog.png') }}" class="object-contain rounded">
         @elseif($category->id == 3)
-            <img src="{{ asset('images/biodiversitylossinfog.png') }}" class="w-full h-full object-cover">
+            <img src="{{ asset('images/biodiversitylossinfog.png') }}" class="object-contain rounded">
         @endif
-
-        <!-- dark gradient at bottom -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-
-        <!-- Text -->
-        <div class="absolute bottom-6 left-6 text-white max-w-2xl">
-            <h1 class="text-4xl font-bold mb-2">
-                {{ $category->name }}
-            </h1>
-            <p class="text-slate-300">
-                {{ $category->description }}
-            </p>
-        </div>
 
     </div>
 
 </div>
 
-<div class="max-w-6xl mx-auto px-6">
+</div>
+
+
 
     <!-- Articles -->
     <h2 class="text-2xl font-semibold text-white mb-6">
@@ -75,6 +76,6 @@
 
     </div>
 
-</div>
+
 
 </x-app-layout>
