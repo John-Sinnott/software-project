@@ -19,7 +19,7 @@
         </div>
 
         <!-- Name -->
-        <h1 class="text-3xl font-bold text-white mb-4">
+        <h1 class="text-4xl font-bold text-white mb-2">
             {{ $article->name }}
         </h1>
 
@@ -42,16 +42,17 @@
             </p>
         </div>
         @endif
-
+        <hr class="border-slate-700 my-6">
         <!-- Full article with dropdown toggle -->
         <div>
             <button id="toggleBtn"
-                class="text-blue-400 hover:text-blue-300 mb-3">
-                Read Full Article ↓
+                class="text-blue-400 hover:text-blue-300 mb-3 text-lg">
+                Read Full Article 
             </button>
 
-            <div id="fullText" class="hidden text-slate-300 leading-relaxed">
-                {{ $article->article_full }}
+            <div id="fullText" class="hidden text-slate-300 leading-relaxed space-y-4">
+                <!-- What this does is returns the string with <br> before all new lines -->
+            {!! nl2br(e($article->article_full)) !!}
             </div>
         </div>
 
@@ -85,10 +86,10 @@ document.getElementById('toggleBtn').addEventListener('click', function() {
 
     if (text.classList.contains('hidden')) {
         text.classList.remove('hidden');
-        this.innerText = "Hide Article ↑";
+        this.innerText = "Hide Article";
     } else {
         text.classList.add('hidden');
-        this.innerText = "Read Full Article ↓";
+        this.innerText = "Read Full Article";
     }
 });
 </script>
